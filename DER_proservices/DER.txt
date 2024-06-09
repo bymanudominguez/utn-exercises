@@ -1,0 +1,63 @@
+Modelo de Datos DER para Proservices
+
+El modelo de datos DER para Proservices se compone de las siguientes entidades:
+
+    Servicio: Representa un servicio que puede ser ofrecido por un prestador. Un servicio está compuesto por un conjunto de tareas.
+    Tarea: Representa una tarea que debe ser realizada dentro de un servicio.
+    Prestador: Representa a una persona que ofrece sus servicios a través de la plataforma.
+    Consumidor: Representa a una persona que busca contratar los servicios de un prestador.
+    Contrato: Representa un contrato entre un consumidor y un prestador para la realización de un trabajo.
+    Calificación: Representa una calificación que un consumidor otorga a un prestador por un trabajo realizado.
+
+Las relaciones entre estas entidades son las siguientes:
+
+    Un servicio tiene muchos prestadores.
+    Un prestador ofrece muchos servicios.
+    Un servicio está compuesto por muchas tareas.
+    Una tarea pertenece a un servicio.
+    Un contrato tiene un consumidor y un prestador.
+    Un contrato tiene muchas tareas.
+    Un contrato tiene una calificación.
+
+Además de estas entidades y relaciones, el modelo de datos también incluye los siguientes atributos:
+
+    **En la entidad Servicio:
+        Nombre
+        Descripción
+        Precio
+        Disponibilidad
+    **En la entidad Tarea:
+        Descripción
+        Tiempo estimado
+    **En la entidad Prestador:
+        Nombre
+        Apellido
+        Fecha de nacimiento
+        Tipo y número de documento
+        CUIT/CUIL
+        Contacto (teléfonos, emails)
+        Disponibilidad
+        Radio de cobertura
+        Fotos de trabajos realizados
+    **En la entidad Consumidor:
+        Nombre
+        Apellido
+        Contacto (teléfonos, emails)
+    **En la entidad Contrato:
+        Fecha de inicio
+        Fecha de fin
+        Horario
+    **En la entidad Calificación:
+        Estrellas
+        Opinión
+
+Este modelo de datos permite representar el dominio propuesto de una manera adecuada. Las relaciones entre las entidades son coherentes con los requisitos funcionales planteados. Los atributos de las entidades son suficientes para almacenar la información necesaria.
+
+A continuación, se presentan algunos comentarios adicionales sobre el modelo de datos:
+
+    **La entidad Servicio tiene un atributo Disponibilidad que indica los días y horarios en que el servicio está disponible. Este atributo es importante para que los consumidores puedan encontrar los servicios que están disponibles en el momento que los necesitan.
+    **La entidad Prestador tiene un atributo Radio de cobertura que indica el radio de distancia dentro del cual el prestador está dispuesto a trabajar. Este atributo es importante para que los consumidores puedan encontrar los prestadores que están cerca de su ubicación.
+    **La entidad Contrato tiene un atributo Fecha de inicio que indica la fecha en que el contrato comienza a regir. Este atributo es importante para que los prestadores y consumidores puedan saber cuándo deben comenzar a cumplir con sus obligaciones contractuales.
+    **La entidad Calificación tiene un atributo Estrellas que indica la calificación que el consumidor otorga al prestador. Este atributo es importante para que otros consumidores puedan conocer la reputación del prestador.
+
+Este modelo de datos puede ser utilizado como punto de partida para el desarrollo del sistema Proservices.
